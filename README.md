@@ -14,21 +14,8 @@ A json file containing a library of home appliances and a range of their wattage
       "unit": "watts",
       "options": [10, 15]
     },
-    {
-      "id": 2,
-      "name": "Refrigerator",
-      "description": "Domestic refrigerator",
-      "unit": "watts",
-      "options": [150, 200]
-    },
-    {
-      "id": 3,
-      "name": "Water Heater",
-      "description": "Electric water heater",
-      "unit": "watts",
-      "options": [3000, 4500]
-    },
 
   ]
 }
 ``
+
