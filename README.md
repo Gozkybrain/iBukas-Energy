@@ -17,5 +17,9 @@ A json file containing a library of home appliances and a range of their wattage
 
   ]
 }
-``
+```
 
+## Calculations
+All the input by the user will be summed up to get the total wattage required by the home. Even tho all gadgets will not be turned on at the same time, it is best to input all gadgets that would be used on the system so that there would be enough charge for them, and we can be sure that the selected inverter can carry it comfortably. Let the total need of the house be assumed to be a total of `3400W` ie `3.4KW`.
+
+### 
