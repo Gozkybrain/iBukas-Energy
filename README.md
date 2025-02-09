@@ -20,6 +20,10 @@ A json file containing a library of home appliances and a range of their wattage
 ```
 
 ## Calculations
-All the input by the user will be summed up to get the total wattage required by the home. Even tho all gadgets will not be turned on at the same time, it is best to input all gadgets that would be used on the system so that there would be enough charge for them, and we can be sure that the selected inverter can carry it comfortably. Let the total need of the house be assumed to be a total of `3400W` ie `3.4KW`.
+All the input by the user will be summed up to get the total wattage required by the home. Even tho all gadgets will not be turned on at the same time, it is best to input all gadgets that would be used on the system so that there would be enough charge for them, and we can be sure that the selected inverter can carry it comfortably. Let the total need of the house be assumed to be a total of `3400W` ie `3.4KW`, therefore the minimum inverter for this setup is a `4KVA` inverter.
 
-### 
+`If Inverter is Less than 2.5KVA, then recommend 12V system; if more than 2.5KVA but less than 5KVA, then recommend 24V system. Anything higher than that should be a 48V System.`
+
+The average peak sunlight will also be assumed to be `5 hours` per day.
+
+### others
