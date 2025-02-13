@@ -1,4 +1,3 @@
-/* Header Styles */
 .header {
     background: #111;
     color: white;
@@ -38,19 +37,16 @@
     transition: color 0.3s ease;
 }
 
-/* Active Link */
 .menu .active a {
     color: #f39c12;
 }
 
-/* Hover Effect */
 .menu a:hover {
     color: #f39c12;
     border-bottom: 2px solid #f39c12;
 
 }
 
-/* Bottom Menu (Dropdown) */
 .dropdown {
     display: none;
     position: absolute;
@@ -78,12 +74,10 @@
     background: #f39c12;
 }
 
-/* Show dropdown on hover */
 .menu li:hover .dropdown {
     display: block;
 }
 
-/* Logo */
 .logo-box {
     text-align: center;
     display: flex;
@@ -96,12 +90,10 @@
     height: 35%;
 }
 
-/* Desktop Menu */
 .desktop-menu {
     display: flex;
 }
 
-/* Hamburger Button */
 .menu-toggle {
     background: none;
     border: none;
@@ -115,11 +107,8 @@
     transform: translateY(-50%);
 }
 
-/* Mobile Menu */
 .mobile-menu {
-  
     display: none;
-   
 }
 
 .mobile-menu.open {
@@ -128,6 +117,8 @@
 
 .mobile-logo {
     margin-bottom: 20px;
+    width: 100%;
+    height: auto;
 }
 
 .mobile-links {
@@ -147,25 +138,26 @@
     font-weight: bold;
 }
 
-/* Active Link in Mobile */
 .mobile-links .active a {
     color: #f39c12;
     border-bottom: 2px solid #f39c12;
 }
 
-/* Close Button */
 .close-btn {
-    background: none;
+    background: #f39c12;
     border: none;
-    color: white;
-    font-size: 30px;
+    color: #2B509F;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 20px;
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    bottom: 15px;
+    right: 0;
+    left: 0;
 }
 
-/* Responsive */
+/* Mobile responsive */
 @media (max-width: 768px) {
     .desktop-menu {
         display: none;
@@ -188,12 +180,14 @@
         height: 100vh;
         background: #222;
         color: white;
-        padding: 20px;
+        padding: 50px;
         display: none;
         flex-direction: column;
         align-items: center;
     }
 }
+
+
 
 /* Footer Styles */
 .footer {

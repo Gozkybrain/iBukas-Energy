@@ -40,7 +40,9 @@ export default function Header() {
                     </li>
                 </ul>
 
-                {/* Hamburger Button */}
+
+
+                {/* Hamburger Button  only for mobile*/}
                 <button
                     className="menu-toggle"
                     onClick={() => setMenuOpen(!menuOpen)}>
@@ -51,37 +53,42 @@ export default function Header() {
             {/* Mobile Menu */}
             <div
                 className={`mobile-menu ${menuOpen
-                        ? "animate__animated animate__slideInLeft open"
-                        : ""
+                    ? "animate__animated animate__slideInLeft open"
+                    : ""
                     }`}
             >
                 <button
                     className="close-btn"
                     onClick={() => setMenuOpen(false)}>
-                    ✖
+                    ✖ Close
                 </button>
 
                 {/* Logo in Mobile Menu */}
-                <div className="mobile-logo">
+                <div className="logo-box">
                     <Link href="/">
                         <Image
                             src={logo}
                             alt="iBukas Energy"
-                            width={120} height={60} priority />
+                            className="mobile-logo"
+                            priority />
                     </Link>
                 </div>
 
                 <ul className="mobile-links">
-                    <li className={pathname === "/" ? "active" : ""}>
+                    <li className={pathname === "/" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}>
                         <Link href="/">Home</Link>
                     </li>
-                    <li className={pathname === "/about" ? "active" : ""}>
+                    <li className={pathname === "/about" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}>
                         <Link href="/about">About Us</Link>
                     </li>
-                    <li className={pathname === "/calculator" ? "active" : ""}>
+                    <li className={pathname === "/calculator" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}>
                         <Link href="/calculator">Calculator</Link>
                     </li>
-                    <li className={pathname === "/contact" ? "active" : ""}>
+                    <li className={pathname === "/contact" ? "active" : ""}
+                        onClick={() => setMenuOpen(false)}>
                         <Link href="/contact">Contact Us</Link>
                     </li>
                 </ul>
