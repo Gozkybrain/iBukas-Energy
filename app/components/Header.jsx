@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import logo from "@/public/images/logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,28 +11,28 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="nav">
-        {/* Desktop Menu */}
+        {/* Left Menu */}
         <ul className="menu desktop-menu">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about">About Us</Link></li>
           <li><Link href="/services">Services</Link></li>
         </ul>
 
-        {/* Logo Centered */}
+        {/* Center Logo */}
         <div className="logo">
           <Link href="/">
-            <Image src="/logo.png" alt="iBukas Energy" width={100} height={50} />
+            <Image src={logo} alt="iBukas Energy" width={100} height={50} priority />
           </Link>
         </div>
 
-        {/* Right Side Menu */}
+        {/* Right Menu */}
         <ul className="menu desktop-menu">
           <li><Link href="/calculator">Calculator</Link></li>
           <li><Link href="/contact">Contact Us</Link></li>
           <li><Link href="/terms">Terms</Link></li>
         </ul>
 
-        {/* Hamburger Menu Button */}
+        {/* Hamburger Button */}
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
@@ -44,7 +45,7 @@ export default function Header() {
         {/* Logo in Mobile Menu */}
         <div className="mobile-logo">
           <Link href="/">
-            <Image src="/logo.png" alt="iBukas Energy" width={120} height={60} />
+            <Image src={logo} alt="iBukas Energy" width={120} height={60} priority />
           </Link>
         </div>
 
