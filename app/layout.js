@@ -1,5 +1,6 @@
 import "./styles/globals.css";
 import "./styles/layout.css";
+import "./styles/home.css";
 import "animate.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
