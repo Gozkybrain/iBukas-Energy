@@ -2,99 +2,159 @@
 .header {
     background: #111;
     color: white;
-    padding: 15px 20px;
+    padding: 5px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
-  }
-  
-  .nav {
+    width: 100%;
+}
+
+.nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    justify-content: space-between;
-  }
-  
-  .menu {
+    gap: 40px;
+}
+
+.menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     padding: 0;
     margin: 0;
-  }
-  
-  .menu li {
+    position: relative;
+}
+
+.menu li {
     padding: 10px;
-  }
-  
-  .menu a {
+    position: relative;
+}
+
+.menu a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .logo {
-    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+/* Active Link */
+.menu .active a {
+    color: #f39c12;
+}
+
+/* Hover Effect */
+.menu a:hover {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+
+}
+
+/* Bottom Menu (Dropdown) */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: #222;
+    padding: 10px;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown li {
+    padding: 8px 12px;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+    background: #f39c12;
+}
+
+/* Show dropdown on hover */
+.menu li:hover .dropdown {
+    display: block;
+}
+
+/* Logo */
+.logo-box {
     text-align: center;
-  }
-  
-  .desktop-menu {
     display: flex;
-  }
-  
-  /* Hamburger Button */
-  .menu-toggle {
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 35%;
+    height: 35%;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+    display: flex;
+}
+
+/* Hamburger Button */
+.menu-toggle {
     background: none;
     border: none;
     color: white;
     font-size: 30px;
     cursor: pointer;
     display: none;
-  }
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mobile Menu */
+.mobile-menu {
   
-  /* Mobile Menu */
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100vh;
-    background: #222;
-    color: white;
-    padding: 20px;
     display: none;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .mobile-menu.open {
-    display: flex;
-  }
-  
-  .mobile-logo {
+   
+}
+
+.mobile-menu.open {
+    display: none;
+}
+
+.mobile-logo {
     margin-bottom: 20px;
-  }
-  
-  .mobile-links {
+}
+
+.mobile-links {
     list-style: none;
     padding: 0;
     text-align: center;
-  }
-  
-  .mobile-links li {
+}
+
+.mobile-links li {
     margin: 15px 0;
-  }
-  
-  .mobile-links a {
+}
+
+.mobile-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  /* Close Button */
-  .close-btn {
+}
+
+/* Active Link in Mobile */
+.mobile-links .active a {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+}
+
+/* Close Button */
+.close-btn {
     background: none;
     border: none;
     color: white;
@@ -103,26 +163,43 @@
     position: absolute;
     top: 15px;
     right: 15px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .desktop-menu {
-      display: none;
+        display: none;
     }
-  
+
     .menu-toggle {
-      display: block;
+        display: block;
     }
-  }
-  
-  
-  /* Footer Styles */
-  .footer {
+
+
+.mobile-menu.open {
+    display: flex;
+}
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100vh;
+        background: #222;
+        color: white;
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer Styles */
+.footer {
     background: #111;
     color: white;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-  }
-  
+}
