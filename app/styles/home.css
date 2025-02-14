@@ -39,7 +39,7 @@
 
 .hero-btn {
     padding: 12px 24px;
-    background-color: #e67e22;
+    background-color: #2d2d2d;
     color: #dedede;
     margin: 10px 0;
     border: none;
@@ -50,8 +50,24 @@
 
 .hero-btn:hover {
     background-color: #dedede;
-    color: #e67e22;
+    color: #2c2c2c;
 }
+
+
+.carousel-container {
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+
+.carousel-image {
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+}
+  
 
 /* Responsive Design */
 @media (max-width: 768px) {
